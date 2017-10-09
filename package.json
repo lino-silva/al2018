@@ -21,5 +21,8 @@
     "morgan": "^1.7.0",
     "q": "^1.4.1",
     "request": "^2.75.0"
+  },
+  "scripts": {
+    "start": "node index.js"
   }
 }
