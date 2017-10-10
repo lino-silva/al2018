@@ -56,10 +56,10 @@
     <!-- Header -->
     <header class="header" id="top">
       <div class="text-vertical-center">
-        <h1>Start Bootstrap</h1>
-        <h3>Free Bootstrap Themes &amp; Templates</h3>
-        <br>
-        <a href="#about" class="btn btn-dark btn-lg js-scroll-trigger">Find Out More</a>
+        <h1>{{header.title}}</h1>
+        <h3>{{header.subtitle}}</h3>
+        <br/>
+        <a href="#about" class="btn btn-dark btn-lg js-scroll-trigger">Hein?</a>
       </div>
     </header>
 
@@ -71,39 +71,38 @@
         <div class="row">
           <div class="col-lg-10 col-lg-offset-1 mx-auto text-center">
             <h4>
-              <strong>Start Bootstrap</strong>
+              <strong>Por favor, confirmem<br/> presença até o dia {{footer.rsvpDate}}</strong>
             </h4>
-            <p>3481 Melrose Place
-              <br>Beverly Hills, CA 90210</p>
             <ul class="list-unstyled">
               <li>
+                {{footer.address.line1}}<br/>
+                {{footer.address.line2}}
+              </li>
+              <li>
+                <hr class="small" />
+              </li>
+              <li>
                 <i class="fa fa-phone fa-fw"></i>
-                (123) 456-7890</li>
+                Ana: {{footer.contact.ana.phone}}
+              </li>
               <li>
                 <i class="fa fa-envelope-o fa-fw"></i>
-                <a href="mailto:name@example.com">name@example.com</a>
+                <a href="mailto:{{footer.contact.ana.email}}">{{footer.contact.ana.email}}</a>
+              </li>
+              <li>
+                <hr class="small" />
+              </li>
+              <li>
+                <i class="fa fa-phone fa-fw"></i>
+                Lino: {{footer.contact.lino.phone}}
+              </li>
+              <li>
+                <i class="fa fa-envelope-o fa-fw"></i>
+                <a href="mailto:{{footer.contact.lino.email}}">{{footer.contact.lino.email}}</a>
               </li>
             </ul>
             <br>
-            <ul class="list-inline">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fa fa-facebook fa-fw fa-3x"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fa fa-twitter fa-fw fa-3x"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fa fa-dribbble fa-fw fa-3x"></i>
-                </a>
-              </li>
-            </ul>
             <hr class="small">
-            <p class="text-muted">Copyright &copy; Your Website 2017</p>
           </div>
         </div>
       </div>

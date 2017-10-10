@@ -1,9 +1,8 @@
 <!-- About -->
 <section id="about" class="about">
     <div class="container text-center">
-    <h2>Stylish Portfolio is the perfect theme for your next project!</h2>
-    <p class="lead">This theme features some wonderful photography courtesy of
-        <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>
+    <h2>{{about.title}}</h2>
+    <p class="lead">{{about.subtitle}}</p>
     </div>
     <!-- /.container -->
 </section>
@@ -13,61 +12,23 @@
     <div class="container">
     <div class="row text-center">
         <div class="col-lg-10 col-lg-offset-1 mx-auto">
-        <h2>Our Services</h2>
+        <h2>O dia</h2>
         <hr class="small">
         <div class="row">
-            <div class="col-md-3 col-sm-6">
-            <div class="service-item">
-                <span class="fa-stack fa-4x">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-cloud fa-stack-1x text-primary"></i>
-                </span>
-                <h4>
-                <strong>Service Name</strong>
-                </h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                <a href="#" class="btn btn-light">Learn More</a>
-            </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-            <div class="service-item">
-                <span class="fa-stack fa-4x">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-compass fa-stack-1x text-primary"></i>
-                </span>
-                <h4>
-                <strong>Service Name</strong>
-                </h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                <a href="#" class="btn btn-light">Learn More</a>
-            </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-            <div class="service-item">
-                <span class="fa-stack fa-4x">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-flask fa-stack-1x text-primary"></i>
-                </span>
-                <h4>
-                <strong>Service Name</strong>
-                </h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                <a href="#" class="btn btn-light">Learn More</a>
-            </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-            <div class="service-item">
-                <span class="fa-stack fa-4x">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-shield fa-stack-1x text-primary"></i>
-                </span>
-                <h4>
-                <strong>Service Name</strong>
-                </h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                <a href="#" class="btn btn-light">Learn More</a>
-            </div>
-            </div>
+            {{#each dia}}
+                <div class="col-md-3 col-sm-6">
+                    <div class="service-item">
+                        <span class="fa-stack fa-4x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-cloud fa-stack-1x text-primary"></i>
+                        </span>
+                        <h4>
+                            <strong>{{title}}</strong>
+                        </h4>
+                        <p>{{description}}</p>
+                    </div>
+                </div>
+            {{/each}}
         </div>
         <!-- /.row (nested) -->
         </div>
@@ -143,10 +104,10 @@
 
 <!-- Map -->
 <section id="contact" class="map">
-    <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
+    <iframe width="100%" height="100%" frameborder="0" style="border:0" scrolling="no" marginheight="0" marginwidth="0" src="{{map.embed}}" allowfullscreen></iframe>
     <br/>
     <small>
-    <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
+    <a href="{{map.link}}"></a>
     </small>
 </section>
 
