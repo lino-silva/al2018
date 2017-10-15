@@ -2,14 +2,20 @@
 
 exports.index = function (req, res) {
   res.render('home', {
+    title: 'Ana & Lino',
     header: {
-      title: 'É verdade!',
-      subtitle: 'A Ana e o Lino vão casar!'
+      title: '"A festa"',
+      subtitle: '01.12.2018',
+      names: 'Ana e Lino'
     },
-    about: {
-      title: 'Yep, não é brincadeira - vai mesmo haver festa!',
-      subtitle: 'E, visto que o Lino é parvo, fizemos um convite digital para vocês!'
-    },
+    reviews: [
+      { phrase: '<strong>Não vais chorar</strong>, pois não?', author: 'José Carlos', role: 'Pai da Noiva'},
+      { phrase: 'Fiquei mesmo contente, <strong>putinha</strong>.', author: 'Francisco Ribeiro', role: '"Amigo"'},
+      { phrase: 'Eu até te parabenizava... <strong>Mas é o Lino.</strong>', author: 'Leandro Silva', role: 'Irmão do Noivo'},
+      { phrase: '<strong>Awwwwww</strong>', author: 'Adelino Faria', role: 'Amigo'},
+      { phrase: 'Eu já sabia - <strong>o Chico disse no Facebook</strong>.', author: 'Avelino Silva', role: 'Pai do Noivo'},
+      { phrase: '<strong>Juraaaaaaaa</strong>', author: 'Mariana Ascenção', role: 'Amiga'},
+    ],
     dia: [{
       title: 'Bebidas',
       description: 'Até cair!'

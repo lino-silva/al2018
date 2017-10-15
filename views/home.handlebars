@@ -1,113 +1,19 @@
-<!-- About -->
-<section id="about" class="about">
-    <div class="container text-center">
-    <h2>{{about.title}}</h2>
-    <p class="lead">{{about.subtitle}}</p>
+<section class="container-fluid">
+    <div class="row reviews">
+        <h1 class="col-12 text-center">Diz-se por aí:</h1>
+        {{#each reviews}}
+        <blockquote class="blockquote col-sm-6 col-md-4">
+            <p class="mb-0">"{{{phrase}}}"</p>
+            <footer class="blockquote-footer">{{author}} ({{role}})</footer>
+        </blockquote>
+        {{/each}}
     </div>
-    <!-- /.container -->
 </section>
 
-<!-- Services -->
-<section id="services" class="services bg-primary text-white">
-    <div class="container">
-    <div class="row text-center">
-        <div class="col-lg-10 col-lg-offset-1 mx-auto">
-        <h2>O dia</h2>
-        <hr class="small">
-        <div class="row">
-            {{#each dia}}
-                <div class="col-md-3 col-sm-6">
-                    <div class="service-item">
-                        <span class="fa-stack fa-4x">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-cloud fa-stack-1x text-primary"></i>
-                        </span>
-                        <h4>
-                            <strong>{{title}}</strong>
-                        </h4>
-                        <p>{{description}}</p>
-                    </div>
-                </div>
-            {{/each}}
-        </div>
-        <!-- /.row (nested) -->
-        </div>
-        <!-- /.col-lg-10 -->
-    </div>
-    <!-- /.row -->
-    </div>
-    <!-- /.container -->
-</section>
-
-<!-- Callout -->
-<aside class="callout">
-    <div class="text-vertical-center">
-    <h1>Vertically Centered Text</h1>
-    </div>
-</aside>
-
-<!-- Portfolio -->
-<section id="portfolio" class="portfolio">
-    <div class="container">
-    <div class="row">
-        <div class="col-lg-10 col-lg-offset-1 mx-auto text-center">
-        <h2>Our Work</h2>
-        <hr class="small">
-        <div class="row">
-            <div class="col-md-6">
-            <div class="portfolio-item">
-                <a href="#">
-                <img class="img-portfolio img-responsive" src="images/portfolio-1.jpg">
-                </a>
-            </div>
-            </div>
-            <div class="col-md-6">
-            <div class="portfolio-item">
-                <a href="#">
-                <img class="img-portfolio img-responsive" src="images/portfolio-2.jpg">
-                </a>
-            </div>
-            </div>
-            <div class="col-md-6">
-            <div class="portfolio-item">
-                <a href="#">
-                <img class="img-portfolio img-responsive" src="images/portfolio-3.jpg">
-                </a>
-            </div>
-            </div>
-            <div class="col-md-6">
-            <div class="portfolio-item">
-                <a href="#">
-                <img class="img-portfolio img-responsive" src="images/portfolio-4.jpg">
-                </a>
-            </div>
-            </div>
-        </div>
-        <!-- /.row (nested) -->
-        <a href="#" class="btn btn-dark">View More Items</a>
-        </div>
-        <!-- /.col-lg-10 -->
-    </div>
-    <!-- /.row -->
-    </div>
-    <!-- /.container -->
-</section>
-
-<!-- Call to Action -->
-<aside class="call-to-action bg-primary text-white">
-    <div class="container text-center">
-    <h3>The buttons below are impossible to resist.</h3>
-    <a href="#" class="btn btn-lg btn-light">Click Me!</a>
-    <a href="#" class="btn btn-lg btn-dark">Look at Me!</a>
-    </div>
-</aside>
-
-<!-- Map -->
-<section id="contact" class="map">
+<section class="map">
     <iframe width="100%" height="100%" frameborder="0" style="border:0" scrolling="no" marginheight="0" marginwidth="0" src="{{map.embed}}" allowfullscreen></iframe>
     <br/>
     <small>
     <a href="{{map.link}}"></a>
     </small>
 </section>
-

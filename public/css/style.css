@@ -1,0 +1,65 @@
+/* XS */
+
+header {
+    height: 500px;
+    background: lightblue;
+    padding-top: 100px;
+    /* background: url('/images/vila.jpg'); */
+    background-size: cover;
+    background-position: center;
+    color: black;
+}
+
+header h1 {
+    font-size: 5.0rem;
+    padding-bottom: 20px;
+}
+
+header h3 {
+    padding-top: 40px;
+}
+
+header button {
+    margin-top: 40px;
+}
+
+.reviews {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.reviews h1 {
+    margin-bottom: 80px;
+}
+
+.reviews blockquote {
+    padding: .5rem 1rem;
+    margin-bottom: 3rem;
+    font-size: 1.25rem;
+    border-left: .25rem solid #eceeef;
+}
+
+.map {
+    height: 500px;
+}
+
+/* SM */
+@media (min-width: 576px) {
+
+}
+
+/* MD */
+@media (min-width: 768px) {
+
+}
+
+/* LG */
+@media (min-width: 992px) {
+
+}
+
+/* XL */
+@media (min-width: 1200px) {
+
+}
