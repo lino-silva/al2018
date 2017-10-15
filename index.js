@@ -1,20 +1,12 @@
-'use strict';
-
 const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 const handlebars = require('express-handlebars');
 const expressValidator = require('express-validator');
-const mongoose = require('mongoose');
 const path = require('path');
-const Q = require('q');
 
 const app = module.exports = express();
-
-// DB connection
-mongoose.Promise = Q.Promise;
-// mongoose.connect('mongodb://localhost');
 
 // remove header
 app.disable('x-powered-by');
@@ -40,7 +32,6 @@ app.engine('handlebars', handlebars({
 
       return options.inverse(this);
     },
-
   },
 }));
 

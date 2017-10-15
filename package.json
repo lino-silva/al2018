@@ -18,10 +18,15 @@
     "express-session": "^1.14.1",
     "express-validator": "^3.0.0",
     "method-override": "^2.3.6",
-    "mongoose": "^4.6.6",
     "morgan": "^1.7.0",
-    "q": "^1.4.1",
     "request": "^2.75.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.11.1",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.8.0"
   },
   "scripts": {
     "postinstall": "./node_modules/bower/bin/bower install",
