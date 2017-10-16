@@ -11,7 +11,6 @@ header {
 }
 
 header h1 {
-    font-size: 5.0rem;
     padding-bottom: 20px;
 }
 
@@ -25,7 +24,6 @@ header button {
 }
 
 .reviews {
-    max-width: 960px;
     margin: 0 auto;
     padding: 40px 0;
 }
@@ -43,6 +41,14 @@ header button {
 
 .map {
     height: 500px;
+}
+
+footer.container {
+    padding: 40px 0;
+}
+
+footer h2 {
+    padding-bottom: 20px;
 }
 
 /* SM */

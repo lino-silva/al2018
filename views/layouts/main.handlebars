@@ -23,7 +23,7 @@
     <!-- Header -->
     <header class="container-fluid text-center">
       <div class="row">
-        <h1 class="col-12">{{header.title}}</h1>
+        <h1 class="col-12 display-1">{{header.title}}</h1>
         <h4 class="col-12">{{header.subtitle}}</h3>
         <h3 class="col-12">{{header.names}}</h3>
       </div>
@@ -33,38 +33,40 @@
     {{{body}}}
 
     <!-- Footer -->
-    <footer>
-      <strong>Por favor, confirmem<br/> presença até o dia {{footer.rsvpDate}}</strong>
-      <ul class="list-unstyled">
+    <footer class="container">
+      <div class="row text-center">
+        <h2 class="col-12">
+          <strong>Por favor, confirmem<br/> presença até o dia {{footer.rsvpDate}}</strong>
+        </h2>
+      </div>
+      <ul class="list-unstyled text-center text-small">
         <li>
-          {{footer.address.line1}}<br/>
-          {{footer.address.line2}}
+          <h4>{{footer.address.line1}}</h4>
+          <h4>{{footer.address.line2}}</h4>
         </li>
         <li>
           <hr class="small" />
         </li>
         <li>
           <i class="fa fa-phone fa-fw"></i>
-          Ana: {{footer.contact.ana.phone}}
+          <small>Ana: {{footer.contact.ana.phone}}</small>
         </li>
         <li>
           <i class="fa fa-envelope-o fa-fw"></i>
-          <a href="mailto:{{footer.contact.ana.email}}">{{footer.contact.ana.email}}</a>
+           <small><a href="mailto:{{footer.contact.ana.email}}">{{footer.contact.ana.email}}</a></small>
         </li>
         <li>
           <hr class="small" />
         </li>
         <li>
           <i class="fa fa-phone fa-fw"></i>
-          Lino: {{footer.contact.lino.phone}}
+           <small>Lino: {{footer.contact.lino.phone}}</small>
         </li>
         <li>
           <i class="fa fa-envelope-o fa-fw"></i>
-          <a href="mailto:{{footer.contact.lino.email}}">{{footer.contact.lino.email}}</a>
+           <small><a href="mailto:{{footer.contact.lino.email}}">{{footer.contact.lino.email}}</a></small>
         </li>
       </ul>
-      <br>
-      <hr class="small">
     </footer>
 
     <!-- Bootstrap core JavaScript -->
