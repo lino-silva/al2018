@@ -1,13 +1,19 @@
 /* XS */
+html, body {
+    width: auto;
+    overflow-x: hidden;
+}
 
 header {
-    height: 500px;
-    background: lightblue;
-    padding-top: 100px;
-    /* background: url('/images/vila.jpg'); */
+    height: 400px;
+    padding-top: 40px;
+    background: url('/images/bg.png');
     background-size: cover;
     background-position: center;
+    background-color: lightblue;
     color: black;
+    -webkit-text-stroke: 1.0px #000000;
+    -webkit-text-fill-color: #FFFFFF
 }
 
 header h1 {
@@ -18,8 +24,7 @@ header h3 {
     padding-top: 40px;
 }
 
-header button {
-    cursor: pointer;
+header .btn {
     margin-top: 40px;
 }
 
@@ -39,12 +44,17 @@ header button {
     border-left: .25rem solid #eceeef;
 }
 
-.map {
+.map .col-12 {
+    padding: 0;
     height: 500px;
 }
 
 footer.container {
     padding: 40px 0;
+}
+
+footer .please-confirm {
+    margin: 40px 0;
 }
 
 footer h2 {

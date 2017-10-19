@@ -16,57 +16,60 @@
 
     <!-- Custom CSS -->
     <link href="css/style.css" rel="stylesheet">
-
   </head>
 
   <body>
-    <!-- Header -->
-    <header class="container-fluid text-center">
-      <div class="row">
-        <h1 class="col-12 display-1">{{header.title}}</h1>
-        <h4 class="col-12">{{header.subtitle}}</h3>
-        <h3 class="col-12">{{header.names}}</h3>
-      </div>
-      <button type="button" class="btn btn-info">Confirmar presença</button>
-    </header>
-
     {{{body}}}
+        
+    <section class="map container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <iframe width="100%" height="100%" frameborder="0" style="border:0" scrolling="no" marginheight="0" marginwidth="0" src="{{map.embed}}" allowfullscreen></iframe>
+                <br/>
+                <small>
+                <a href="{{map.link}}"></a>
+                </small>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="container">
-      <div class="row text-center">
-        <h2 class="col-12">
-          <strong>Por favor, confirmem<br/> presença até o dia {{footer.rsvpDate}}</strong>
-        </h2>
-      </div>
-      <ul class="list-unstyled text-center text-small">
-        <li>
-          <h4>{{footer.address.line1}}</h4>
-          <h4>{{footer.address.line2}}</h4>
-        </li>
-        <li>
-          <hr class="small" />
-        </li>
-        <li>
-          <i class="fa fa-phone fa-fw"></i>
-          <small>Ana: {{footer.contact.ana.phone}}</small>
-        </li>
-        <li>
-          <i class="fa fa-envelope-o fa-fw"></i>
-           <small><a href="mailto:{{footer.contact.ana.email}}">{{footer.contact.ana.email}}</a></small>
-        </li>
-        <li>
-          <hr class="small" />
-        </li>
-        <li>
-          <i class="fa fa-phone fa-fw"></i>
-           <small>Lino: {{footer.contact.lino.phone}}</small>
-        </li>
-        <li>
-          <i class="fa fa-envelope-o fa-fw"></i>
-           <small><a href="mailto:{{footer.contact.lino.email}}">{{footer.contact.lino.email}}</a></small>
-        </li>
-      </ul>
+        <div class="row text-center">
+            <h2 class="col-12 please-confirm">
+                <strong>Por favor, confirmem<br/> presença até o dia {{footer.rsvpDate}}</strong>
+            </h2>
+            <div class="col-12 col-md-8 ml-1 col-lg-4 col-xl-4 mx-auto">
+                <ul class="col-12 list-unstyled text-center text-small">
+                    <li>
+                        <h4>{{footer.address.line1}}</h4>
+                        <h4>{{footer.address.line2}}</h4>
+                    </li>
+                    <li>
+                        <hr class="small" />
+                    </li>
+                    <li>
+                        <i class="fa fa-phone fa-fw"></i>
+                        <small>Ana: {{footer.contact.ana.phone}}</small>
+                    </li>
+                    <li>
+                        <i class="fa fa-envelope-o fa-fw"></i>
+                        <small><a href="mailto:{{footer.contact.ana.email}}">{{footer.contact.ana.email}}</a></small>
+                    </li>
+                    <li>
+                        <hr class="small" />
+                    </li>
+                    <li>
+                        <i class="fa fa-phone fa-fw"></i>
+                        <small>Lino: {{footer.contact.lino.phone}}</small>
+                    </li>
+                    <li>
+                        <i class="fa fa-envelope-o fa-fw"></i>
+                        <small><a href="mailto:{{footer.contact.lino.email}}">{{footer.contact.lino.email}}</a></small>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </footer>
 
     <!-- Bootstrap core JavaScript -->
