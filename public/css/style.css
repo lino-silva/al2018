@@ -7,13 +7,11 @@ html, body {
 header {
     height: 400px;
     padding-top: 40px;
-    background: url('/images/bg.png');
+    /* background: url('/images/bg.png'); */
     background-size: cover;
     background-position: center;
     background-color: lightblue;
     color: black;
-    -webkit-text-stroke: 1.0px #000000;
-    -webkit-text-fill-color: #FFFFFF
 }
 
 header h1 {
@@ -39,7 +37,7 @@ header .btn {
 
 .reviews blockquote {
     padding: .5rem 1rem;
-    margin-bottom: 3rem;
+    margin: 1.5rem 0;
     font-size: 1.25rem;
     border-left: .25rem solid #eceeef;
 }
