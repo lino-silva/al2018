@@ -47,12 +47,51 @@ header .btn {
     height: 500px;
 }
 
-footer.container {
-    padding: 40px 0;
+.venue {
+    background: lightblue;
 }
 
-footer .please-confirm {
-    margin-top: 40px;
+.slider-image {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+.slider-image.room-1 {
+    background-image: url('../images/quarto_1.jpg')
+}
+
+.slider-image.room-2 {
+    background-image: url('../images/quarto_2.jpg')
+}
+
+.slider-image.room-3 {
+    background-image: url('../images/quarto_3.jpg')
+}
+
+.slider-image.room-4 {
+    background-image: url('../images/quarto_4.jpg')
+}
+
+.slider-image.room-5 {
+    background-image: url('../images/quarto_5.jpg')
+}
+
+.slider-image.venue-1 {
+    background-image: url('../images/casa_1.jpg')
+}
+
+.slider-image.venue-2 {
+    background-image: url('../images/casa_2.jpg')
+}
+
+.slider-image.venue-3 {
+    background-image: url('../images/casa_3.jpg')
+}
+
+.slider-image.venue-4 {
+    background-image: url('../images/casa_4.jpg')
 }
 
 footer .please-confirm-button {
@@ -70,15 +109,20 @@ footer h2 {
 
 /* MD */
 @media (min-width: 768px) {
-
+    .slider-image {
+        width: 80%;
+    }
+    
 }
 
 /* LG */
 @media (min-width: 992px) {
-
+    .slider-image {
+        width: 50%;
+        height: 400px;
+    }    
 }
 
 /* XL */
 @media (min-width: 1200px) {
-
 }

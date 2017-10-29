@@ -13,6 +13,7 @@
     <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
 
     <link href="vendors/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet" />
+    <link href="vendors/swiper/dist/css/swiper.min.css" rel="stylesheet" />
 
     <!-- Custom CSS -->
     <link href="css/style.css" rel="stylesheet">
@@ -21,20 +22,78 @@
   <body>
     {{{body}}}
         
+    <section class="venue container-fluid">
+        <div class="row">
+            <h2 class="col-12 text-center mt-5 mb-5">
+                O Sítio da Festa
+            </h2>
+            <div class="col-12 text-center">
+                <p>
+                    A festa vai decorrer inteiramente na Casa do Egipto, em Barcelos.
+                </p>
+                <p>
+                    Pois é, não vai haver carros a passear com fitas nas antenas a buzinar. Yay! 🙌
+                </p>
+            </div>
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><div class="slider-image mx-auto venue-1"></div></div>
+                <div class="swiper-slide"><div class="slider-image mx-auto venue-2"></div></div>
+                <div class="swiper-slide"><div class="slider-image mx-auto venue-3"></div></div>
+                <div class="swiper-slide"><div class="slider-image mx-auto venue-4"></div></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <section class="hotel container-fluid mb-5">
+        <div class="row">
+            <h2 class="col-12 text-center mt-5 mb-5">
+                Alojamento
+            </h2>
+            <div class="col-12 text-center">
+                <p>
+                    Para aqueles que vão festejar tanto, mas TANTO, que não vão conseguir depois ir para casa, pensámos em vocês também!
+                </p>
+                <p>
+                    Mediante quandidade de reservas, conseguimos preços especiais na <a href="http://www.barcelosguesthouse.com/" target="_blank">Barcelos Guesthouse</a>
+                </p>
+                <p>
+                    Os preços por pessoa rondam os 20-30€ por pessoa.
+                </p>
+            </div>
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><div class="slider-image mx-auto room-1"></div></div>
+                <div class="swiper-slide"><div class="slider-image mx-auto room-2"></div></div>
+                <div class="swiper-slide"><div class="slider-image mx-auto room-3"></div></div>
+                <div class="swiper-slide"><div class="slider-image mx-auto room-4"></div></div>
+                <div class="swiper-slide"><div class="slider-image mx-auto room-5"></div></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
     <section class="map container-fluid">
         <div class="row">
-            <div class="col-12">
-                <iframe width="100%" height="100%" frameborder="0" style="border:0" scrolling="no" marginheight="0" marginwidth="0" src="{{map.embed}}" allowfullscreen></iframe>
+            <div class="col-12" id="map_canvas">
+                {{!-- <iframe width="100%" height="100%" frameborder="0" style="border:0" scrolling="no" marginheight="0" marginwidth="0" src="{{map.embed}}" allowfullscreen></iframe>
                 <br/>
                 <small>
                 <a href="{{map.link}}"></a>
-                </small>
+                </small> --}}
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="container">
+    <footer class="container-fluid mt-5">
         <div class="row text-center">
             <h2 class="col-12 please-confirm">
                 <strong>Por favor, confirmem<br/> presença até o dia {{footer.rsvpDate}}</strong>
@@ -83,8 +142,12 @@
     <!-- Plugin JavaScript -->
     <script src="vendors/jquery.easing/js/jquery.easing.min.js"></script>
 
+    <script src="vendors/swiper/dist/js/swiper.min.js"></script>
+
     <!-- Custom scripts for this template -->
     <script src="js/main.js"></script>
+
+    <script src="//maps.googleapis.com/maps/api/js?sensor=false&callback=initialize"></script>
 
   </body>
 
