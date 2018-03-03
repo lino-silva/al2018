@@ -7,7 +7,7 @@ html, body {
 header {
     height: 400px;
     padding-top: 40px;
-    /* background: url('/images/bg.png'); */
+    background: url('http://linosilva.com/ana-lino/bg.jpg');
     background-size: cover;
     background-position: center;
     background-color: lightblue;
