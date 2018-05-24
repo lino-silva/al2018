@@ -3,18 +3,144 @@
     <div class="row">
         <h1 class="col-12 display-1">{{header.title}}</h1>
         <h4 class="col-12">{{header.subtitle}}</h3>
-        <h3 class="col-12">{{header.names}}</h3>
+            <h3 class="col-12">{{header.names}}</h3>
     </div>
     <a role="button" class="btn btn-info" href="http://lino.ninja/rsvp/">Confirmar presença</a>
 </header>
-
-<section class="container">
-    <div class="row reviews">
-        {{#each reviews}}
-        <blockquote class="blockquote col-sm-6 col-md-4">
-            <p class="mb-0">"{{{phrase}}}"</p>
-            <footer class="blockquote-footer">{{author}} ({{role}})</footer>
-        </blockquote>
-        {{/each}}
+<section class="venue container-fluid">
+    <div class="row">
+        <h2 class="col-12 text-center mt-5 mb-5">
+            O Sítio da Festa
+        </h2>
+        <div class="col-12 text-center">
+            <p>
+                A festa vai decorrer inteiramente na Casa do Egipto, em Barcelos.
+            </p>
+            <p>
+                Pois é, não vai haver carros a passear com fitas nas antenas a buzinar. Yay! 🙌
+            </p>
+        </div>
+    </div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="slider-image mx-auto venue-1"></div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slider-image mx-auto venue-2"></div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slider-image mx-auto venue-3"></div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slider-image mx-auto venue-4"></div>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
     </div>
 </section>
+
+<section class="hotel container-fluid mb-5">
+    <div class="row">
+        <h2 class="col-12 text-center mt-5 mb-5">
+            Alojamento
+        </h2>
+        <div class="col-12 text-center">
+            <p>
+                Para aqueles que vão festejar tanto, mas TANTO, que não vão conseguir depois ir para casa, pensámos em vocês também!
+            </p>
+            <p>
+                Mediante quandidade de reservas, conseguimos preços especiais na
+                <a href="http://www.barcelosguesthouse.com/" target="_blank">Barcelos Guesthouse</a>
+            </p>
+            <p>
+                Os preços por pessoa rondam os 20-30€ por pessoa.
+            </p>
+        </div>
+    </div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="slider-image mx-auto room-1"></div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slider-image mx-auto room-2"></div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slider-image mx-auto room-3"></div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slider-image mx-auto room-4"></div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slider-image mx-auto room-5"></div>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+
+<section class="map container-fluid">
+    <div class="row">
+        <div class="col-12" id="map_canvas">
+            {{!--
+            <iframe width="100%" height="100%" frameborder="0" style="border:0" scrolling="no" marginheight="0" marginwidth="0" src="{{map.embed}}"
+                allowfullscreen></iframe>
+            <br/>
+            <small>
+                <a href="{{map.link}}"></a>
+            </small> --}}
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="container-fluid mt-5">
+    <div class="row text-center">
+        <h2 class="col-12 please-confirm">
+            <strong>Por favor, confirmem
+                <br/> presença até o dia {{footer.rsvpDate}}</strong>
+        </h2>
+        <div class="col-12 please-confirm-button">
+            <a role="button" class="btn btn-info" href="http://lino.ninja/rsvp/">Confirmar presença</a>
+        </div>
+        <div class="col-12 col-md-8 ml-1 col-lg-4 col-xl-4 mx-auto">
+            <ul class="col-12 list-unstyled text-center text-small">
+                <li>
+                    <h4>{{footer.address.line1}}</h4>
+                    <h4>{{footer.address.line2}}</h4>
+                </li>
+                <li>
+                    <hr class="small" />
+                </li>
+                <li>
+                    <i class="fa fa-phone fa-fw"></i>
+                    <small>Ana: {{footer.contact.ana.phone}}</small>
+                </li>
+                <li>
+                    <i class="fa fa-envelope-o fa-fw"></i>
+                    <small>
+                        <a href="mailto:{{footer.contact.ana.email}}">{{footer.contact.ana.email}}</a>
+                    </small>
+                </li>
+                <li>
+                    <hr class="small" />
+                </li>
+                <li>
+                    <i class="fa fa-phone fa-fw"></i>
+                    <small>Lino: {{footer.contact.lino.phone}}</small>
+                </li>
+                <li>
+                    <i class="fa fa-envelope-o fa-fw"></i>
+                    <small>
+                        <a href="mailto:{{footer.contact.lino.email}}">{{footer.contact.lino.email}}</a>
+                    </small>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
