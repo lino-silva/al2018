@@ -5,10 +5,8 @@ const methodOverride = require('method-override');
 const handlebars = require('express-handlebars');
 const expressValidator = require('express-validator');
 const path = require('path');
-const graph = require('fbgraph');
 
 const app = (module.exports = express());
-graph.setAccessToken(process.env.ACCESS_TOKEN);
 
 // remove header
 app.disable('x-powered-by');
