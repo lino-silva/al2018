@@ -97,6 +97,7 @@ header .btn {
 
 a[role='button'] {
   background-color: #325041;
+  font-family: 'Verdana';
 }
 
 footer .please-confirm-button {
