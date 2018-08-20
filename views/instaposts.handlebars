@@ -1,0 +1,15 @@
+{{#nodes}}
+<div class="grid-item" data-last-timestamp="{{node.taken_at_timestamp}}">
+    <div class="Instagram-card-image">
+        <img src="{{node.display_url}}" class="img-fluid" />
+    </div>
+
+    <div class="Instagram-card-content">
+        <p class="Likes">{{node.edge_liked_by.count}} likes</p>
+        <p>
+            {{#node.edge_media_to_caption.edges}} {{node.text}} {{/node.edge_media_to_caption.edges}}
+        </p>
+        <p class="comments">{{node.edge_media_to_comment.count}} comment(s)</p>
+    </div>
+</div>
+{{/nodes}}

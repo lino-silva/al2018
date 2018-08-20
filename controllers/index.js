@@ -1,3 +1,5 @@
+const rp = require('request-promise');
+
 const index = function index(req, res) {
   res.render('home', {
     title: 'Ana & Lino',
@@ -26,9 +28,51 @@ const index = function index(req, res) {
   });
 };
 
+const options = {
+  uri: 'https://www.instagram.com/explore/tags/begostosos/?__a=1',
+  json: true,
+};
+
 const follow = (req, res) => {
-  res.render('follow', {});
+  rp(options)
+    .then(response => {
+      console.log(response);
+      res.render('follow', {
+        response: response.graphql.hashtag.edge_hashtag_to_media.edges,
+      });
+    })
+    .catch(err => {});
+};
+
+const getNewPosts = (req, res) => {
+  console.log(req.query);
+  const latestTimestamp = parseInt(req.query.latest, 10);
+  rp(options).then(response => {
+    const nodes = [];
+    for (
+      let i = 0;
+      i < response.graphql.hashtag.edge_hashtag_to_media.edges.length;
+      i += 1
+    ) {
+      const node = response.graphql.hashtag.edge_hashtag_to_media.edges[i];
+      if (latestTimestamp >= node.node.taken_at_timestamp) {
+        break;
+      }
+
+      nodes.push(node);
+    }
+
+    if (nodes.length) {
+      res.render('instaposts', {
+        layout: false,
+        nodes,
+      });
+    } else {
+      res.sendStatus(204);
+    }
+  });
 };
 
 module.exports.index = index;
 module.exports.follow = follow;
+module.exports.getNewPosts = getNewPosts;

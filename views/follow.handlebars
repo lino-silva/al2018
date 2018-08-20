@@ -1,2 +1,23 @@
-<script src="https://apps.elfsight.com/p/platform.js" defer></script>
-<div class="elfsight-app-63e51cff-c9f5-48bb-b22c-7fee9c53acbc"></div>
+{{!--
+<script src="https://apps.elfsight.com/p/platform.js" defer></script> --}} {{!--
+<div class="elfsight-app-63e51cff-c9f5-48bb-b22c-7fee9c53acbc"></div> --}}
+
+<div class="grid container-fluid">
+    {{#response}}
+    <div class="grid-item" data-last-timestamp="{{node.taken_at_timestamp}}">
+        <div class="Instagram-card-image">
+            <img src="{{node.display_url}}" class="img-fluid" />
+        </div>
+
+        <div class="Instagram-card-content">
+            <p class="Likes">{{node.edge_liked_by.count}} likes</p>
+            <p>
+                {{#node.edge_media_to_caption.edges}} {{node.text}} {{/node.edge_media_to_caption.edges}}
+            </p>
+            <p class="comments">{{node.edge_media_to_comment.count}} comment(s)</p>
+        </div>
+    </div>
+    {{/response}}
+</div>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script src="/js/insta.js"></script>

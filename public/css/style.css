@@ -1,8 +1,6 @@
 /* XS */
 html,
 body {
-  width: auto;
-  overflow-x: hidden;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -97,6 +95,10 @@ header .btn {
   background-color: #003809;
 }
 
+a[role='button'] {
+  background-color: #325041;
+}
+
 footer .please-confirm-button {
   margin-bottom: 40px;
 }
@@ -125,4 +127,107 @@ footer h2 {
 
 /* XL */
 @media (min-width: 1200px) {
+}
+
+.grid {
+  height: 100%;
+  margin: 0 auto;
+}
+
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.grid-item {
+  width: 300px;
+  margin-bottom: 15px;
+}
+
+.grid-item {
+  float: left;
+  background: white;
+}
+
+.Instagram-card-user-image {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+}
+
+.Instagram-card-content {
+  padding: 20px;
+}
+
+.Likes {
+  font-weight: bold;
+}
+
+.Instagram-card-content-user {
+  font-weight: bold;
+  color: #262626;
+}
+
+.hashtag {
+  color: #003569;
+}
+
+.comments {
+  color: #999;
+}
+
+.user-comment {
+  color: #003569;
+}
+
+.Instagram-card-footer {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.footer-action-icons {
+  font-size: 16px;
+  color: #ccc;
+}
+
+.comments-input {
+  border: none;
+  margin-left: 10px;
+  width: 100%;
+}
+
+.masonry,
+.masonry .masonry-brick {
+  -webkit-transition-duration: 0.7s;
+  -moz-transition-duration: 0.7s;
+  -ms-transition-duration: 0.7s;
+  -o-transition-duration: 0.7s;
+  transition-duration: 0.7s;
+}
+
+.masonry {
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  -ms-transition-property: height, width;
+  -o-transition-property: height, width;
+  transition-property: height, width;
+}
+
+.masonry .masonry-brick {
+  -webkit-transition-property: left, right, top;
+  -moz-transition-property: left, right, top;
+  -ms-transition-property: left, right, top;
+  -o-transition-property: left, right, top;
+  transition-property: left, right, top;
 }
